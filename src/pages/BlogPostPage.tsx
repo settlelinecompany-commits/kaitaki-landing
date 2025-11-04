@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { getBlogPost, getBlogPosts } from '@/lib/content';
 import { extractKeyTakeaways } from '@/lib/markdown';
@@ -11,6 +12,11 @@ import kaitakiLogo from '../../kaitaki.png';
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   
   if (!slug) {
     return <Navigate to="/" replace />;
