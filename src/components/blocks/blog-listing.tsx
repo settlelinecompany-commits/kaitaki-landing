@@ -13,17 +13,17 @@ export function BlogListing({ posts, className = '' }: BlogListingProps) {
   }
 
   return (
-    <section className={`py-20 ${className}`}>
+    <section className={`pt-8 pb-12 ${className}`}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full mb-6">
-            <span className="text-sm text-zinc-400">YOUR GO-TO KNOWLEDGE HUB</span>
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full mb-6">
+            <span className="text-sm text-zinc-600">YOUR GO-TO KNOWLEDGE HUB</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-zinc-100">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-zinc-900">
             Insights, Resources, & Success Stories
           </h2>
-          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
             Discover expert insights, stay up to date on industry trends, and explore real-world success stories in Kaitaki's library.
           </p>
         </div>
@@ -34,7 +34,7 @@ export function BlogListing({ posts, className = '' }: BlogListingProps) {
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
-              className="group flex flex-col h-full bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700 transition-colors"
+              className="group flex flex-col h-full bg-gray-50 border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 transition-colors"
             >
               {/* Image/Visual */}
               <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-blue-400/10 flex items-center justify-center">
@@ -67,23 +67,23 @@ export function BlogListing({ posts, className = '' }: BlogListingProps) {
               <div className="flex flex-col flex-grow p-6">
                 {/* Category */}
                 <div className="mb-3">
-                  <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">
+                  <span className="text-xs font-semibold text-zinc-600 uppercase tracking-wider">
                     {post.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-zinc-100 mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold text-zinc-900 mb-3 group-hover:text-blue-500 transition-colors">
                   {post.title}
                 </h3>
 
                 {/* Description - flex-grow to push CTA down */}
-                <p className="text-sm text-zinc-400 mb-4 line-clamp-3 flex-grow">
+                <p className="text-sm text-zinc-600 mb-4 line-clamp-3 flex-grow">
                   {post.description}
                 </p>
 
                 {/* CTA - now at bottom due to flex-grow above */}
-                <div className="flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors mt-auto">
+                <div className="flex items-center gap-2 text-blue-500 group-hover:text-blue-600 transition-colors mt-auto">
                   <span className="text-sm font-medium">Read More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>

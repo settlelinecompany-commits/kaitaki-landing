@@ -16,7 +16,7 @@ export function KeyTakeaways({ takeaways, className = '' }: KeyTakeawaysProps) {
             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
         </div>
-        <h3 className="text-lg font-semibold text-blue-400">
+        <h3 className="text-lg font-semibold text-blue-500">
           Key Takeaways
         </h3>
       </div>
@@ -24,7 +24,7 @@ export function KeyTakeaways({ takeaways, className = '' }: KeyTakeawaysProps) {
         {takeaways.map((takeaway, index) => (
           <li key={index} className="flex items-start gap-3">
             <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-            <p className="text-zinc-200 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               {takeaway}
             </p>
           </li>

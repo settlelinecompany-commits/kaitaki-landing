@@ -49,13 +49,8 @@ export default function BlogPostPage() {
     <>
       <ReadingProgress />
       
-      <div className="min-h-screen bg-zinc-950 text-zinc-100 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
-          <div className="absolute bottom-1/3 right-1/4 w-[32rem] h-[32rem] bg-blue-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
-        </div>
-
-        <nav className="border-b border-zinc-800 bg-zinc-950/50 backdrop-blur-sm fixed w-full z-10">
+      <div className="min-h-screen bg-white text-zinc-900 relative overflow-hidden">
+        <nav className="border-b border-gray-200 bg-white/95 backdrop-blur-sm fixed w-full z-10">
           <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <Link
               to="/"
@@ -71,14 +66,14 @@ export default function BlogPostPage() {
           <div className="max-w-6xl mx-auto px-6">
             {/* Breadcrumbs */}
             <nav className="mb-8">
-              <ol className="flex items-center space-x-2 text-sm text-zinc-400">
+              <ol className="flex items-center space-x-2 text-sm text-zinc-600">
                 {breadcrumbs.map((crumb, index) => (
                   <li key={crumb.name} className="flex items-center">
                     {index > 0 && <span className="mx-2">/</span>}
                     {index === breadcrumbs.length - 1 ? (
-                      <span className="text-zinc-100">{crumb.name}</span>
+                      <span className="text-zinc-900">{crumb.name}</span>
                     ) : (
-                      <Link to={crumb.url} className="hover:text-zinc-100 transition-colors">
+                      <Link to={crumb.url} className="hover:text-zinc-900 transition-colors">
                         {crumb.name}
                       </Link>
                     )}
@@ -93,34 +88,34 @@ export default function BlogPostPage() {
                 {/* Article Header */}
                 <header className="mb-12">
                   <div className="flex items-center space-x-2 mb-4">
-                    <span className="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium">
+                    <span className="px-3 py-1 bg-blue-500/10 text-blue-500 rounded-full text-sm font-medium">
                       {post.category}
                     </span>
                     {Array.isArray(post.tags) && post.tags.map((tag) => (
-                      <span key={tag} className="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-sm">
+                      <span key={tag} className="px-3 py-1 bg-gray-100 text-zinc-700 rounded-full text-sm">
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <h1 className="text-4xl lg:text-5xl font-bold text-zinc-100 mb-4 leading-tight">
+                  <h1 className="text-4xl lg:text-5xl font-bold text-zinc-900 mb-4 leading-tight">
                     {post.title}
                   </h1>
                   
                   {/* Author Info */}
                   <div className="text-left mb-6">
-                    <p className="text-sm text-zinc-400">
-                      Written by <span className="text-blue-400 font-medium">{post.author}</span>
+                    <p className="text-sm text-zinc-600">
+                      Written by <span className="text-blue-500 font-medium">{post.author}</span>
                       {post.reviewedBy && (
-                        <span> • Reviewed by <span className="text-blue-400 font-medium">{post.reviewedBy}</span></span>
+                        <span> • Reviewed by <span className="text-blue-500 font-medium">{post.reviewedBy}</span></span>
                       )}
                     </p>
-                    <p className="text-sm text-zinc-400 mt-1">
+                    <p className="text-sm text-zinc-600 mt-1">
                       {formatDate(post.date)} • {post.readTime}
                     </p>
                   </div>
                   
-                  <p className="mb-4 leading-relaxed text-zinc-300 text-lg">
+                  <p className="mb-4 leading-relaxed text-zinc-700 text-lg">
                     {post.description}
                   </p>
 
@@ -132,7 +127,7 @@ export default function BlogPostPage() {
                   )}
                   
                   {/* Hero Image */}
-                  <div className="relative w-full h-64 lg:h-80 rounded-2xl overflow-hidden mb-8 bg-zinc-900/50">
+                  <div className="relative w-full h-64 lg:h-80 rounded-2xl overflow-hidden mb-8 bg-gray-50">
                     {post.cover ? (
                       <img
                         src={post.cover}
@@ -176,19 +171,21 @@ export default function BlogPostPage() {
                 <div className="sticky top-8 space-y-8">
                   {/* CTA Section - Desktop */}
                   <div className="hidden lg:block bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6">
-                    <h3 className="text-lg font-bold text-zinc-100 mb-3">
+                    <h3 className="text-lg font-bold text-zinc-900 mb-3">
                       Ready to Transform Your Privacy Operations?
                     </h3>
-                    <p className="text-sm text-zinc-400 mb-4">
+                    <p className="text-sm text-zinc-600 mb-4">
                       Get personalized guidance from our expert team to maximize your privacy compliance and ensure governance.
                     </p>
                     <div className="flex flex-col gap-3">
-                      <Link
-                        to="/?waitlist=true"
+                      <a
+                        href="https://global.kaitaki.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-colors text-center"
                       >
-                        Request Early Access
-                      </Link>
+                        Try the Demo
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -201,13 +198,15 @@ export default function BlogPostPage() {
         <RelatedPosts posts={allPosts} currentSlug={post.slug} />
 
         {/* Mobile Sticky CTA */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-800 p-4 shadow-lg z-50">
-          <Link
-            to="/?waitlist=true"
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg z-50">
+          <a
+            href="https://global.kaitaki.app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors text-center block"
           >
-            Request Early Access
-          </Link>
+            Try the Demo
+          </a>
         </div>
       </div>
     </>

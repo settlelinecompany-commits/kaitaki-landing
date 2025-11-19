@@ -13,13 +13,13 @@ export function RelatedPosts({ posts, currentSlug }: RelatedPostsProps) {
   if (filteredPosts.length === 0) return null;
 
   return (
-    <section className="py-12 bg-zinc-900/50">
+    <section className="py-12 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-8">
-          <h2 className="text-2xl lg:text-3xl font-bold text-zinc-100 mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-zinc-900 mb-4">
             Related Articles
           </h2>
-          <p className="text-zinc-400">
+          <p className="text-zinc-600">
             Continue learning with these related topics
           </p>
         </div>
@@ -29,7 +29,7 @@ export function RelatedPosts({ posts, currentSlug }: RelatedPostsProps) {
             <Link 
               key={post.slug} 
               to={`/blog/${post.slug}`}
-              className="group block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700 transition-all duration-300"
+              className="group block bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 transition-all duration-300"
             >
               <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-blue-400/10 flex items-center justify-center">
                 {post.cover ? (
@@ -59,23 +59,23 @@ export function RelatedPosts({ posts, currentSlug }: RelatedPostsProps) {
               
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400">
+                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500">
                     {post.category}
                   </span>
-                  <span className="text-xs text-zinc-400">
+                  <span className="text-xs text-zinc-600">
                     {post.readTime}
                   </span>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-zinc-100 mb-2 group-hover:text-blue-400 transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-zinc-900 mb-2 group-hover:text-blue-500 transition-colors duration-200">
                   {post.title}
                 </h3>
                 
-                <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2">
+                <p className="text-sm text-zinc-600 leading-relaxed line-clamp-2">
                   {post.description}
                 </p>
 
-                <div className="flex items-center gap-2 mt-4 text-blue-400 group-hover:text-blue-300 transition-colors">
+                <div className="flex items-center gap-2 mt-4 text-blue-500 group-hover:text-blue-600 transition-colors">
                   <span className="text-sm font-medium">Read More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>

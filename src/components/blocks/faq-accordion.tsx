@@ -40,26 +40,26 @@ export function FAQAccordion({
   return (
     <div className={`w-full ${className}`}>
       {/* Title */}
-      <h2 className="text-3xl lg:text-4xl font-bold text-zinc-100 text-center mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold text-zinc-900 text-center mb-12">
         {title}
       </h2>
 
       {/* FAQ Items */}
       <div className="max-w-4xl mx-auto">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-zinc-800 last:border-b-0">
+          <div key={index} className="border-b border-gray-200 last:border-b-0">
             <button
-              className="w-full py-6 px-0 text-left flex items-center justify-between hover:bg-zinc-900/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset rounded-lg"
+              className="w-full py-6 px-0 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset rounded-lg"
               onClick={() => toggleItem(index)}
               onKeyDown={(e) => handleKeyDown(e, index)}
               aria-expanded={openItems.includes(index)}
               aria-controls={`faq-answer-${index}`}
             >
-              <span className="text-lg font-medium text-zinc-100 pr-4">
+              <span className="text-lg font-medium text-zinc-900 pr-4">
                 {faq.question}
               </span>
               <svg
-                className={`w-5 h-5 text-zinc-400 transition-transform duration-200 flex-shrink-0 ${
+                className={`w-5 h-5 text-zinc-600 transition-transform duration-200 flex-shrink-0 ${
                   openItems.includes(index) ? 'rotate-180' : ''
                 }`}
                 fill="none"
@@ -84,7 +84,7 @@ export function FAQAccordion({
                   : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="text-zinc-300 leading-relaxed">
+              <div className="text-zinc-700 leading-relaxed">
                 {faq.answer}
               </div>
             </div>

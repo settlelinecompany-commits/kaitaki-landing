@@ -66,7 +66,7 @@ export function TableOfContents({ className = '', containerId = 'article-content
 
   return (
     <div className={`bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6 ${className}`}>
-      <h3 className="text-lg font-semibold text-zinc-100 mb-4">
+      <h3 className="text-lg font-semibold text-zinc-900 mb-4">
         TABLE OF CONTENTS
       </h3>
       <nav>
@@ -74,9 +74,9 @@ export function TableOfContents({ className = '', containerId = 'article-content
           <div key={item.id}>
             <a
               href={`#${item.id}`}
-              className={`block py-2 text-zinc-300 hover:text-blue-400 transition-colors duration-200 ${
+              className={`block py-2 text-zinc-700 hover:text-blue-500 transition-colors duration-200 ${
                 activeId === item.id 
-                  ? 'font-semibold text-blue-400' 
+                  ? 'font-semibold text-blue-500' 
                   : 'font-normal'
               }`}
               onClick={(e) => {
@@ -90,7 +90,7 @@ export function TableOfContents({ className = '', containerId = 'article-content
               {item.title}
             </a>
             {index < toc.length - 1 && (
-              <div className="border-b border-zinc-800"></div>
+              <div className="border-b border-gray-200"></div>
             )}
           </div>
         ))}
