@@ -13,7 +13,7 @@ export function BlogListing({ posts, className = '' }: BlogListingProps) {
   }
 
   return (
-    <section className={`pt-8 pb-12 ${className}`}>
+    <section className={`py-16 ${className}`}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-8">

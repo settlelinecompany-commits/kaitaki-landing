@@ -99,7 +99,7 @@ export default function Home() {
           </section>
 
           {/* How It Works Section */}
-          <section id="how-it-works" className="py-8">
+          <section id="how-it-works" className="py-16">
             <FeatureSteps
               features={[
                 {
@@ -138,7 +138,7 @@ export default function Home() {
           </section>
 
           {/* Final CTA Section */}
-          <section className="py-2">
+          <section className="py-16">
             <div className="text-center max-w-3xl mx-auto p-12 bg-gray-50 border border-gray-200 rounded-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-6">
                 Every tool scans code - none automate stakeholder intake

@@ -14,7 +14,7 @@ export function Features2({
 	subDescription = "Collecting data, Reasoning about risk, and Coordinating mitigation"
 }: Features2Props) {
 	return (
-		<section className="py-16 md:py-32">
+		<section className="py-16">
 			<div className="mx-auto max-w-6xl px-6">
 				<div className="text-center mb-12">
 					<h2 className="text-balance text-3xl md:text-4xl lg:text-5xl font-semibold text-zinc-900">

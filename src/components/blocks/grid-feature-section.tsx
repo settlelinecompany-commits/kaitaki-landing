@@ -65,7 +65,7 @@ function AnimatedContainer({ className, delay = 0.1, children }: ViewAnimationPr
 
 export function GridFeatureSection() {
 	return (
-		<section className="py-4">
+		<section className="py-16">
 			<div className="mx-auto w-full max-w-6xl space-y-6 px-6">
 				<AnimatedContainer className="mx-auto max-w-3xl text-center">
 					<h2 className="text-3xl font-bold tracking-wide text-balance md:text-4xl lg:text-5xl xl:font-extrabold text-zinc-900">

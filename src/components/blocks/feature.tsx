@@ -33,7 +33,7 @@ function Feature({
   imageAlt = "Process and Solution",
 }: FeatureProps) {
   return (
-    <div className="w-full py-10 lg:py-16">
+    <div className="w-full py-16">
       <div className="container mx-auto max-w-6xl">
         <div className="grid border border-gray-200 rounded-lg p-8 grid-cols-1 gap-8 items-center lg:grid-cols-2 bg-white">
           <div className="flex gap-10 flex-col">
