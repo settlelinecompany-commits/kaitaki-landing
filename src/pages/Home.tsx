@@ -7,7 +7,7 @@ import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { GridFeatureSection } from '@/components/blocks/grid-feature-section';
 import { Feature } from '@/components/blocks/feature';
 import { Features2 } from '@/components/blocks/features-2';
-import { FeatureSteps } from '@/components/blocks/feature-section';
+import { Casestudy5 } from '@/components/ui/casestudy-5';
 import { Footer } from '@/components/blocks/footer';
 import kaitakiLogo from '../../kaitaki.png';
 
@@ -83,8 +83,10 @@ export default function Home() {
             <img
               src="/images/hero/kaitaki-hero.jpg"
               alt="Kaitaki Platform"
-              className="mx-auto rounded-2xl object-contain h-full w-full scale-110"
+              className="mx-auto rounded-2xl object-contain h-full w-full scale-100"
               draggable={false}
+              loading="eager"
+              fetchPriority="high"
             />
           </ContainerScroll>
         </div>
@@ -99,31 +101,30 @@ export default function Home() {
           </section>
 
           {/* How It Works Section */}
-          <section id="how-it-works" className="py-16">
-            <FeatureSteps
-              features={[
+          <section id="how-it-works">
+            <Casestudy5
+              title="How It Works"
+              subtitle="See how Kaitaki transforms intake into audit-ready privacy reports in three steps"
+              featuredCasestudy={{
+                tags: "STEP 1",
+                title: "Voice agent interviews stakeholders",
+                subtitle: "Detect when a new DPIA is needed and collect structured answers via voice or form",
+                image: "/images/how-it-works/step1-hero.png"
+              }}
+              casestudies={[
                 {
-                  step: 'Step 1',
-                  title: 'Voice agent interviews stakeholders',
-                  content: 'Detect when a new DPIA is needed and collect structured answers via voice or form',
-                  image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop'
+                  tags: "STEP 2",
+                  title: "Risk agent scores, drafts mitigations",
+                  subtitle: "Score impact × likelihood, draft mitigations, and approve findings with a full audit trail",
+                  image: "/images/how-it-works/Risk-Report.png"
                 },
                 {
-                  step: 'Step 2',
-                  title: 'Risk agent scores, drafts mitigations',
-                  content: 'Score impact × likelihood, draft mitigations, and approve findings with a full audit trail',
-                  image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop'
-                },
-                {
-                  step: 'Step 3',
-                  title: 'Export instant, audit-ready report',
-                  content: 'Generate a signed report, push final records to RoPA or Jira in one click, instantly pivot to implementation',
-                  image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop'
+                  tags: "STEP 3",
+                  title: "Export instant, audit-ready report",
+                  subtitle: "Generate a signed report, push final records to RoPA or Jira in one click, instantly pivot to implementation",
+                  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop"
                 }
               ]}
-              title="How It Works"
-              autoPlayInterval={4000}
-              imageHeight="h-[400px]"
             />
           </section>
 

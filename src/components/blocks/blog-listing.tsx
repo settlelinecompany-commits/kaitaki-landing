@@ -17,14 +17,14 @@ export function BlogListing({ posts, className = '' }: BlogListingProps) {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full mb-6">
-            <span className="text-sm text-zinc-600">YOUR GO-TO KNOWLEDGE HUB</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full mb-6">
+            <span className="text-sm font-medium text-zinc-600">Insights</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-zinc-900">
             Insights, Resources, & Success Stories
           </h2>
           <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
-            Discover expert insights, stay up to date on industry trends, and explore real-world success stories in Kaitaki's library.
+            Expert guidance, industry updates, and real-world privacy wins
           </p>
         </div>
 

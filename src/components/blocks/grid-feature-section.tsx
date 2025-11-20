@@ -68,11 +68,14 @@ export function GridFeatureSection() {
 		<section className="py-16">
 			<div className="mx-auto w-full max-w-6xl space-y-6 px-6">
 				<AnimatedContainer className="mx-auto max-w-3xl text-center">
+					<div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full mb-6">
+						<span className="text-sm font-medium text-zinc-600">Benefits</span>
+					</div>
 					<h2 className="text-3xl font-bold tracking-wide text-balance md:text-4xl lg:text-5xl xl:font-extrabold text-zinc-900">
 						Compliance That Moves the Needle
 					</h2>
-					<p className="text-zinc-600 mt-4 mb-8 text-sm tracking-wide text-balance md:text-base">
-						Cut review time, reduce audit risk, and prove compliance faster
+					<p className="text-zinc-600 mt-4 mb-8 text-lg text-balance max-w-2xl mx-auto">
+						Reduce audit risk, save time, and strengthen governance effortlessly
 					</p>
 				</AnimatedContainer>
 				<AnimatedContainer

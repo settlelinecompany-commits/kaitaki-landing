@@ -80,7 +80,7 @@ export function FeatureSteps({
                   <h3 className="text-xl md:text-2xl font-semibold text-zinc-900">
                     {feature.title || feature.step}
                   </h3>
-                  <p className="text-sm text-zinc-600 leading-relaxed">
+                  <p className="text-sm text-blue-600 font-medium leading-relaxed">
                     {feature.content}
                   </p>
                 </div>
