@@ -15,6 +15,20 @@ export default function Home() {
   const [showWaitlist, setShowWaitlist] = useState(false);
   const [searchParams] = useSearchParams();
 
+  // Scroll to top on page load and prevent scroll restoration
+  useEffect(() => {
+    // Disable scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    // Force scroll to top
+    window.scrollTo(0, 0);
+    // Also try after a small delay to ensure it works
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+  }, []);
+
   // Check for waitlist parameter on mount and when it changes
   useEffect(() => {
     if (searchParams.get('waitlist') === 'true') {
