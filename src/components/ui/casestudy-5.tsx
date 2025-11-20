@@ -32,8 +32,8 @@ export const Casestudy5 = ({
             <span className="text-sm font-medium text-zinc-600">Workflow</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-zinc-900">
-            {title}
-          </h2>
+          {title}
+        </h2>
           <p className="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto">
             {subtitle}
           </p>
@@ -69,11 +69,11 @@ export const Casestudy5 = ({
             </div>
             <div className="relative isolate flex items-center py-2 md:py-4 self-stretch">
               <div className="w-full flex items-center justify-center">
-                <img
-                  src={featuredCasestudy.image}
-                  alt="placeholder"
+                  <img
+                    src={featuredCasestudy.image}
+                    alt="placeholder"
                   className="max-w-full w-auto max-h-[250px] md:max-h-[320px] h-auto object-contain transition-transform duration-500 ease-out group-hover:scale-105"
-                />
+                  />
               </div>
             </div>
           </div>
