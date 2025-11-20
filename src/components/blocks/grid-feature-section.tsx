@@ -72,7 +72,7 @@ export function GridFeatureSection() {
 						<span className="text-sm font-medium text-zinc-600">Benefits</span>
 					</div>
 					<h2 className="text-3xl font-bold tracking-wide text-balance md:text-4xl lg:text-5xl xl:font-extrabold text-zinc-900">
-						Compliance That Moves the Needle
+						Cut DPIA time 90% Zero manual follow-ups
 					</h2>
 					<p className="text-zinc-600 mt-4 mb-8 text-lg text-balance max-w-2xl mx-auto">
 						Reduce audit risk, save time, and strengthen governance effortlessly
