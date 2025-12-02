@@ -108,7 +108,7 @@ export default function Home() {
 
       <main className="relative">
         {/* Hero Section */}
-        <section id="home" className="relative pt-20 bg-zinc-900">
+        <section id="home" className="relative pt-20 bg-white">
           {/* Grid Pattern Background - Only in Hero */}
           <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden">
             <GridPattern

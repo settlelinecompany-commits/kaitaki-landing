@@ -47,7 +47,7 @@ export function GridPattern({
           <path
             d={`M.5 ${height}V.5H${width}`}
             fill="none"
-            stroke="rgba(63, 63, 70, 0.8)"
+            stroke="rgba(212, 212, 216, 0.8)"
             strokeWidth="1"
             strokeDasharray={strokeDasharray}
           />
@@ -64,8 +64,8 @@ export function GridPattern({
               height={height - 1}
               x={x * width + 1}
               y={y * height + 1}
-              fill="rgba(59, 130, 246, 0.15)"
-              stroke="rgba(96, 165, 250, 0.5)"
+              fill="rgba(59, 130, 246, 0.25)"
+              stroke="rgba(59, 130, 246, 0.5)"
             />
           ))}
         </svg>
