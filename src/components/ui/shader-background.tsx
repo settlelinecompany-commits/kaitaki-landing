@@ -25,7 +25,7 @@ const ShaderBackground = () => {
     const float minorLineFrequency = 1.0;
     const vec4 gridColor = vec4(0.5);
     const float scale = 5.0;
-    const vec4 lineColor = vec4(0.5, 0.7, 0.9, 1.0);
+    const vec4 lineColor = vec4(0.6, 0.75, 0.95, 1.0);
     const float minLineWidth = 0.01;
     const float maxLineWidth = 0.2;
     const float lineSpeed = 1.0 * overallSpeed;
@@ -67,8 +67,8 @@ const ShaderBackground = () => {
       space.y += random(space.x * warpFrequency + iTime * warpSpeed) * warpAmplitude * (0.5 + horizontalFade);
       space.x += random(space.y * warpFrequency + iTime * warpSpeed + 2.0) * warpAmplitude * horizontalFade;
       vec4 lines = vec4(0.0);
-      vec4 bgColor1 = vec4(0.95, 0.97, 1.0, 1.0);
-      vec4 bgColor2 = vec4(0.9, 0.95, 1.0, 1.0);
+      vec4 bgColor1 = vec4(0.98, 0.99, 1.0, 1.0);
+      vec4 bgColor2 = vec4(0.96, 0.98, 1.0, 1.0);
       for(int l = 0; l < linesPerGroup; l++) {
         float normalizedLineIndex = float(l) / float(linesPerGroup);
         float offsetTime = iTime * offsetSpeed;
@@ -85,7 +85,6 @@ const ShaderBackground = () => {
         lines += line * lineColor * rand;
       }
       fragColor = mix(bgColor1, bgColor2, uv.x);
-      fragColor *= verticalFade;
       fragColor.a = 1.0;
       fragColor += lines;
       gl_FragColor = fragColor;
