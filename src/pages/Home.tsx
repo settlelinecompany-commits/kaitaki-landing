@@ -110,13 +110,13 @@ export default function Home() {
         {/* Hero Section */}
         <section id="home" className="relative pt-20 bg-white">
           {/* Interactive Grid Pattern Background - Only in Hero */}
-          <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden pointer-events-auto">
+          <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden">
             <InteractiveGridPattern
-              width={60}
-              height={60}
-              squares={[40, 30]}
-              className="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] opacity-50"
-              squaresClassName="fill-blue-500/10 stroke-zinc-200/50 hover:fill-blue-500/20 hover:stroke-blue-400/50"
+              width={50}
+              height={50}
+              squares={[50, 40]}
+              className="[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+              squaresClassName="fill-transparent stroke-zinc-300/60 hover:fill-blue-500/30 hover:stroke-blue-500/80 transition-all duration-200"
             />
           </div>
           <Hero
