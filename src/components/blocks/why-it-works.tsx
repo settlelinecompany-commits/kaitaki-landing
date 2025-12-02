@@ -7,18 +7,18 @@ import { Mic, Brain, Shield } from 'lucide-react';
 const differentiators = [
   {
     icon: Mic,
-    title: '100% Voice-Based Capture',
-    description: 'Real-time voice → structured assessment. No missed details, no incomplete questionnaires.',
+    title: 'Real-Time Voice Capture Agent',
+    description: 'Converts live stakeholder conversations into structured assessments with near-perfect completeness. Understands expected answers, asks smart follow-ups, and eliminates weeks of email chasing.',
   },
   {
     icon: Brain,
-    title: 'Configurable AI Reasoning Engine',
-    description: 'Every risk decision includes full reasoning, citations, and explainable outputs you can audit.',
+    title: 'Explainable Risk Reasoning Agent',
+    description: 'Scores risks using your matrices, frameworks, and controls. Every decision includes full reasoning, citations, and a transparent chain-of-thought you can audit or override.',
   },
   {
     icon: Shield,
-    title: 'Complete Audit Trail & Governance',
-    description: 'Enterprise-grade traceability from intake to sign-off. Built for regulators.',
+    title: 'End-to-End Orchestrator Agent',
+    description: 'Coordinates interviews, approvals, reminders, mitigations, and reporting across your entire privacy program. Ensures nothing is missed and keeps your team in full control.',
   },
 ];
 
@@ -39,10 +39,10 @@ export function WhyItWorks() {
             Why It Works
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-4">
-            The technology behind the speed
+            The agentic system behind the speed
           </h2>
           <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto">
-            Purpose-built automation powered by voice capture and explainable AI.
+            Purpose-built automation powered by a coordinated network of privacy AI agents — designed for accuracy, completeness, and auditability.
           </p>
         </motion.div>
 
