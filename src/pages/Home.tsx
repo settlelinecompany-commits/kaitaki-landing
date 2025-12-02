@@ -106,33 +106,32 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Grid Pattern Background */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white">
-        <GridPattern
-          squares={[
-            [4, 4],
-            [5, 1],
-            [8, 2],
-            [5, 3],
-            [5, 5],
-            [10, 10],
-            [12, 15],
-            [15, 10],
-            [10, 15],
-            [15, 10],
-            [10, 15],
-            [15, 10],
-          ]}
-          className={cn(
-            "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
-          )}
-        />
-      </div>
-
-      <main className="relative z-0">
+      <main className="relative">
         {/* Hero Section */}
         <section id="home" className="relative pt-20">
+          {/* Grid Pattern Background - Only in Hero */}
+          <div className="absolute inset-0 -z-10 h-full w-full bg-white overflow-hidden">
+            <GridPattern
+              squares={[
+                [4, 4],
+                [5, 1],
+                [8, 2],
+                [5, 3],
+                [5, 5],
+                [10, 10],
+                [12, 15],
+                [15, 10],
+                [10, 15],
+                [15, 10],
+                [10, 15],
+                [15, 10],
+              ]}
+              className={cn(
+                "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+                "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+              )}
+            />
+          </div>
           <Hero
             pill={{
               text: "Your complete Privacy Assurance Operating System",
