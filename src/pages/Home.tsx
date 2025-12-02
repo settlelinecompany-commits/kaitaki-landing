@@ -11,11 +11,10 @@ import { ResultsSection } from '@/components/blocks/results-section';
 import { PlatformOverview } from '@/components/blocks/platform-overview';
 import { Features2 } from '@/components/blocks/features-2';
 import { Footer } from '@/components/blocks/footer';
-import { InteractiveGridPattern } from '@/components/ui/interactive-grid-pattern';
+import ShaderBackground from '@/components/ui/shader-background';
 import { HeroVideoDialog } from '@/components/ui/hero-video-dialog';
 import { Hero } from '@/components/blocks/hero';
 import { HoverLift, FadeIn } from '@/components/animations';
-import { cn } from '@/lib/utils';
 import kaitakiLogo from '../../kaitaki.png';
 
 export default function Home() {
@@ -49,6 +48,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-zinc-900 relative overflow-hidden">
+      {/* Shader Wave Background */}
+      <ShaderBackground />
+      
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -108,16 +110,7 @@ export default function Home() {
 
       <main className="relative">
         {/* Hero Section */}
-        <section id="home" className="relative pt-20 bg-white">
-          {/* Interactive Grid Pattern Background - Only in Hero */}
-          <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden">
-            <InteractiveGridPattern
-              width={50}
-              height={50}
-              squares={[50, 40]}
-              className="[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
-            />
-          </div>
+        <section id="home" className="relative pt-20">
           <Hero
             pill={{
               text: "Your complete Privacy Assurance Operating System",
