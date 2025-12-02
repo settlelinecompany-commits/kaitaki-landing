@@ -30,7 +30,7 @@ export function GridPattern({
     <svg
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-zinc-400/40 stroke-zinc-300/50",
+        "pointer-events-none absolute inset-0 h-full w-full",
         className
       )}
       {...props}
@@ -47,6 +47,8 @@ export function GridPattern({
           <path
             d={`M.5 ${height}V.5H${width}`}
             fill="none"
+            stroke="rgba(212, 212, 216, 0.6)"
+            strokeWidth="1"
             strokeDasharray={strokeDasharray}
           />
         </pattern>
@@ -56,13 +58,14 @@ export function GridPattern({
         <svg x={x} y={y} className="overflow-visible">
           {squares.map(([x, y], index) => (
             <rect
-              strokeWidth="0"
+              strokeWidth="2"
               key={`${x}-${y}-${index}`}
               width={width - 1}
               height={height - 1}
               x={x * width + 1}
               y={y * height + 1}
-              className="fill-blue-500/30 stroke-blue-400/40"
+              fill="rgba(59, 130, 246, 0.25)"
+              stroke="rgba(59, 130, 246, 0.4)"
             />
           ))}
         </svg>
