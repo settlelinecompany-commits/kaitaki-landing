@@ -140,7 +140,7 @@ function HeroContent({
             rel="noopener noreferrer"
             className={cn(
               'inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl transition-colors',
-              'bg-zinc-800 text-white border border-zinc-700 hover:bg-zinc-700',
+              'bg-white text-zinc-900 border border-zinc-300 hover:bg-zinc-50',
               'w-full sm:w-auto'
             )}
           >

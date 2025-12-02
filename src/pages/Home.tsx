@@ -11,7 +11,7 @@ import { ResultsSection } from '@/components/blocks/results-section';
 import { PlatformOverview } from '@/components/blocks/platform-overview';
 import { Features2 } from '@/components/blocks/features-2';
 import { Footer } from '@/components/blocks/footer';
-import { GridPattern } from '@/components/ui/grid-pattern';
+import { InteractiveGridPattern } from '@/components/ui/interactive-grid-pattern';
 import { HeroVideoDialog } from '@/components/ui/hero-video-dialog';
 import { Hero } from '@/components/blocks/hero';
 import { HoverLift, FadeIn } from '@/components/animations';
@@ -109,27 +109,14 @@ export default function Home() {
       <main className="relative">
         {/* Hero Section */}
         <section id="home" className="relative pt-20 bg-white">
-          {/* Grid Pattern Background - Only in Hero */}
-          <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden">
-            <GridPattern
-              squares={[
-                [4, 4],
-                [5, 1],
-                [8, 2],
-                [5, 3],
-                [5, 5],
-                [10, 10],
-                [12, 15],
-                [15, 10],
-                [10, 15],
-                [15, 10],
-                [10, 15],
-                [15, 10],
-              ]}
-              className={cn(
-                "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
-                "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
-              )}
+          {/* Interactive Grid Pattern Background - Only in Hero */}
+          <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden pointer-events-auto">
+            <InteractiveGridPattern
+              width={60}
+              height={60}
+              squares={[40, 30]}
+              className="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] opacity-50"
+              squaresClassName="fill-blue-500/10 stroke-zinc-200/50 hover:fill-blue-500/20 hover:stroke-blue-400/50"
             />
           </div>
           <Hero
