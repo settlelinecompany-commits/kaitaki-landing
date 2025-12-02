@@ -116,7 +116,6 @@ export default function Home() {
               height={50}
               squares={[50, 40]}
               className="[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
-              squaresClassName="fill-transparent stroke-zinc-300/60 hover:fill-blue-500/30 hover:stroke-blue-500/80 transition-all duration-200"
             />
           </div>
           <Hero

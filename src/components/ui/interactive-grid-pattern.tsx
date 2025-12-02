@@ -57,12 +57,10 @@ export function InteractiveGridPattern({
             y={y}
             width={width - 1}
             height={height - 1}
+            fill={isHovered ? "rgba(59, 130, 246, 0.3)" : "transparent"}
+            stroke={isHovered ? "rgba(59, 130, 246, 0.8)" : "rgba(161, 161, 170, 0.4)"}
             strokeWidth="1"
-            className={cn(
-              "transition-all duration-200 ease-in-out cursor-pointer",
-              isHovered ? "" : "",
-              squaresClassName
-            )}
+            className="transition-all duration-200 ease-in-out cursor-pointer"
             onMouseEnter={() => setHoveredSquare(index)}
             onMouseLeave={() => setHoveredSquare(null)}
           />
