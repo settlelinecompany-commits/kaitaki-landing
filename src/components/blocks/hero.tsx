@@ -59,11 +59,11 @@ function MovieEffectAnimation() {
           }}
           className="text-center flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-0"
         >
-          <span className="text-base sm:text-lg md:text-xl font-semibold text-blue-600">
+          <span className="text-base sm:text-lg md:text-xl font-semibold text-blue-400">
             {impactStatements[currentIndex].highlight}
           </span>
-          <span className="text-base sm:text-lg md:text-xl text-zinc-400 mx-2 sm:mx-3">→</span>
-          <span className="text-base sm:text-lg md:text-xl font-medium text-zinc-700">
+          <span className="text-base sm:text-lg md:text-xl text-zinc-500 mx-2 sm:mx-3">→</span>
+          <span className="text-base sm:text-lg md:text-xl font-medium text-zinc-300">
             {impactStatements[currentIndex].result}
           </span>
         </motion.div>
@@ -83,7 +83,7 @@ function HeroContent({
   return (
     <div className="flex flex-col space-y-6 text-center">
       <motion.h1
-        className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl xl:text-7xl"
+        className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease }}
@@ -96,7 +96,7 @@ function HeroContent({
       
       {subtitle && (
         <motion.p
-          className="text-lg md:text-xl text-zinc-700 max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.8, ease }}
@@ -125,7 +125,7 @@ function HeroContent({
             onClick={primaryAction.onClick}
             className={cn(
               'inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl transition-colors',
-              'bg-zinc-900 text-white hover:bg-zinc-800',
+              'bg-blue-600 text-white hover:bg-blue-700',
               'w-full sm:w-auto'
             )}
           >
@@ -140,7 +140,7 @@ function HeroContent({
             rel="noopener noreferrer"
             className={cn(
               'inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl transition-colors',
-              'bg-white text-zinc-900 border border-zinc-300 hover:bg-zinc-50',
+              'bg-zinc-800 text-white border border-zinc-700 hover:bg-zinc-700',
               'w-full sm:w-auto'
             )}
           >
@@ -152,7 +152,7 @@ function HeroContent({
       
       {trustText && (
         <motion.p
-          className="text-xs text-zinc-500 pt-2"
+          className="text-xs text-zinc-400 pt-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
@@ -179,7 +179,7 @@ interface HeroProps {
 
 function Hero({ pill, content, preview }: HeroProps) {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-zinc-900">
       <div className="max-w-5xl mx-auto flex flex-col items-center py-8 px-6 md:px-8 pt-20 md:pt-28">
         {/* Badge */}
         {pill && (

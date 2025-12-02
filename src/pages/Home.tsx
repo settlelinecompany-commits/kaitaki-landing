@@ -108,9 +108,9 @@ export default function Home() {
 
       <main className="relative">
         {/* Hero Section */}
-        <section id="home" className="relative pt-20">
+        <section id="home" className="relative pt-20 bg-zinc-900">
           {/* Grid Pattern Background - Only in Hero */}
-          <div className="absolute inset-0 -z-10 h-full w-full bg-white overflow-hidden">
+          <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden">
             <GridPattern
               squares={[
                 [4, 4],
@@ -127,7 +127,7 @@ export default function Home() {
                 [15, 10],
               ]}
               className={cn(
-                "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+                "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
                 "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
               )}
             />
