@@ -138,9 +138,9 @@ export default function Home() {
               <div className="space-y-4">
                 <HeroVideoDialog
                   animationStyle="from-center"
-                  videoSrc="https://www.youtube.com/embed/KbSe5gBGAfE"
-                  thumbnailSrc="/images/hero/kaitaki-hero.jpg"
-                  thumbnailAlt="Watch Kaitaki Demo"
+                  videoSrc="https://www.youtube.com/embed/1O75DSWtPIo?autoplay=1"
+                  thumbnailSrc="/images/hero/video-thumbnail.png"
+                  thumbnailAlt="Kaitaki Privacy Maturity Assessment Demo"
                 />
                 <p className="text-center text-sm text-zinc-500">
                   Watch a 2-minute overview of the platform
