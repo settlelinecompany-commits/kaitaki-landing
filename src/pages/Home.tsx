@@ -139,7 +139,7 @@ export default function Home() {
                 <HeroVideoDialog
                   animationStyle="from-center"
                   videoSrc="https://www.youtube.com/embed/1O75DSWtPIo?autoplay=1"
-                  thumbnailSrc="/images/hero/video-thumbnail.png"
+                  thumbnailSrc="/images/hero/privacy-maturity-thumbnail.png"
                   thumbnailAlt="Kaitaki Privacy Maturity Assessment Demo"
                 />
                 <p className="text-center text-sm text-zinc-500">
