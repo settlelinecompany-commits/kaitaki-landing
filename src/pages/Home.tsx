@@ -128,7 +128,7 @@ export default function Home() {
                 onClick: () => setShowWaitlist(true),
               },
               secondaryAction: {
-                href: "https://global.kaitaki.app",
+                href: "https://kaitaki-web.vercel.app",
                 text: "Try Platform",
                 icon: <ExternalLink className="h-4 w-4" />,
               },
