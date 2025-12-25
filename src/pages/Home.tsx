@@ -138,7 +138,7 @@ export default function Home() {
               <div className="space-y-4">
                 <HeroVideoDialog
                   animationStyle="from-center"
-                  videoSrc="https://www.youtube.com/embed/1O75DSWtPIo?autoplay=1"
+                  videoSrc="https://www.youtube.com/embed/URVqzS-c_ZU?autoplay=1"
                   thumbnailSrc="/images/hero/privacy-maturity-thumbnail.png"
                   thumbnailAlt="Kaitaki Privacy Maturity Assessment Demo"
                 />
