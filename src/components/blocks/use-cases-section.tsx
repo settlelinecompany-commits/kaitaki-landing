@@ -91,7 +91,7 @@ export function UseCasesSection({ onBookDemo }: UseCasesSectionProps) {
         </motion.div>
 
         {/* Feature Cards Grid with UI Previews */}
-        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-8 items-stretch">
           {useCases.map((useCase, index) => {
             const PreviewComponent = useCase.preview;
             return (
@@ -113,11 +113,11 @@ export function UseCasesSection({ onBookDemo }: UseCasesSectionProps) {
                 </div>
 
                 {/* Content */}
-                <div className="p-4">
+                <div className="p-4 flex flex-col flex-1">
                   <h3 className="mb-2 text-lg font-bold text-zinc-900">
                     {useCase.title}
                   </h3>
-                  <p className="text-sm text-zinc-600 leading-relaxed">
+                  <p className="text-sm text-zinc-600 leading-relaxed flex-1">
                     {useCase.description}
                   </p>
                 </div>
