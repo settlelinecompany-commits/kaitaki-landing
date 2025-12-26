@@ -136,8 +136,7 @@ function HeroContent({
         {secondaryAction && (
           <a
             href={secondaryAction.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...(secondaryAction.href.startsWith('#') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
             className={cn(
               'inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl transition-colors',
               'bg-white text-zinc-900 border border-zinc-300 hover:bg-zinc-50',
