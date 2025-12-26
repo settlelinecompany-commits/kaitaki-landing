@@ -7,6 +7,7 @@ import { BlogListing } from '@/components/blocks/blog-listing';
 import { getFeaturedBlogPosts } from '@/lib/content';
 import { WhyItWorks } from '@/components/blocks/why-it-works';
 import { ChallengesSection } from '@/components/blocks/challenges-section';
+import { UseCasesSection } from '@/components/blocks/use-cases-section';
 import { ResultsSection } from '@/components/blocks/results-section';
 import { PlatformOverview } from '@/components/blocks/platform-overview';
 import { Features2 } from '@/components/blocks/features-2';
@@ -69,8 +70,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <a href="#features" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
-              Features
+            <a href="#use-cases" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+              Use Cases
             </a>
             <a href="#capabilities" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
               Capabilities
@@ -78,8 +79,8 @@ export default function Home() {
             <a href="#results" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
               Results
             </a>
-            <a href="#blog" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
-              Blog
+            <a href="#features" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+              Features
             </a>
           </motion.div>
           <motion.div 
@@ -113,32 +114,32 @@ export default function Home() {
         <section id="home" className="relative pt-20">
           <Hero
             pill={{
-              text: "Your complete Privacy Assurance Operating System",
-              href: "#capabilities",
+              text: "Privacy assessments that explain themselves",
+              href: "#use-cases",
               icon: <Sparkles className="h-4 w-4" />,
               variant: "default",
               size: "md",
             }}
             content={{
-              title: "Run privacy assessments",
-              titleHighlight: "in hours, not weeks",
-              subtitle: "Every new product launch triggers privacy review obligations. Every vendor needs vetting. Your Privacy Team can't keep up — until now.",
+              title: "Privacy Assessments",
+              titleHighlight: "in Hours, Not Weeks",
+              subtitle: "Complete DPIAs, vendor risk assessments, and ROPA - with AI that explains every decision.",
               primaryAction: {
                 text: "Book a Demo",
                 onClick: () => setShowWaitlist(true),
               },
               secondaryAction: {
-                href: "https://kaitaki-web.vercel.app",
-                text: "Try Platform",
+                href: "#use-cases",
+                text: "See Use Cases",
                 icon: <ExternalLink className="h-4 w-4" />,
               },
-              trustText: 'Trusted by enterprise privacy teams managing <strong class="text-zinc-700">50–500+ assessments</strong> per year',
+              trustText: 'Trusted by privacy teams managing <strong class="text-zinc-700">50-500+ assessments</strong> per year',
             }}
             preview={
               <div className="space-y-4">
                 <HeroVideoDialog
                   animationStyle="from-center"
-                  videoSrc="https://www.youtube.com/embed/URVqzS-c_ZU?autoplay=1"
+                  videoSrc="https://www.youtube.com/embed/BRji3CMVNZ8?autoplay=1"
                   thumbnailSrc="/images/hero/privacy-maturity-thumbnail.png"
                   thumbnailAlt="Kaitaki Privacy Maturity Assessment Demo"
                 />
@@ -148,6 +149,11 @@ export default function Home() {
               </div>
             }
           />
+        </section>
+
+        {/* Use Cases */}
+        <section id="use-cases">
+          <UseCasesSection onBookDemo={() => setShowWaitlist(true)} />
         </section>
 
         {/* Challenges & Solutions */}

@@ -7,18 +7,18 @@ import { Mic, Brain, Shield } from 'lucide-react';
 const differentiators = [
   {
     icon: Mic,
-    title: 'Real-Time Voice Capture Agent',
-    description: 'Converts live stakeholder conversations into structured assessments with near-perfect completeness. Understands expected answers, asks smart follow-ups, and eliminates weeks of email chasing.',
+    title: 'Kiwa - Voice Capture Agent',
+    description: 'Converts stakeholder conversations into structured assessments. Asks smart follow-ups. Eliminates weeks of email chasing.',
   },
   {
     icon: Brain,
-    title: 'Explainable Risk Reasoning Agent',
-    description: 'Scores risks using your matrices, frameworks, and controls. Every decision includes full reasoning, citations, and a transparent chain-of-thought you can audit or override.',
+    title: 'Risk Reasoning Agent',
+    description: 'Scores risks using your matrices and frameworks. Every decision includes full reasoning and citations you can audit or override.',
   },
   {
     icon: Shield,
-    title: 'End-to-End Orchestrator Agent',
-    description: 'Coordinates interviews, approvals, reminders, mitigations, and reporting across your entire privacy program. Ensures nothing is missed and keeps your team in full control.',
+    title: 'Orchestrator Agent',
+    description: 'Coordinates interviews, approvals, reminders, and reporting across your entire privacy program. Nothing gets missed.',
   },
 ];
 
@@ -42,7 +42,7 @@ export function WhyItWorks() {
             The agentic system behind the speed
           </h2>
           <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto">
-            Purpose-built automation powered by a coordinated network of privacy AI agents — designed for accuracy, completeness, and auditability.
+            Purpose-built AI agents designed for accuracy, completeness, and auditability.
           </p>
         </motion.div>
 

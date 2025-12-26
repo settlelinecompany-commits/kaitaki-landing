@@ -127,19 +127,19 @@ export function ChallengesSection() {
     {
       icon: <Clock className="w-5 h-5" />,
       title: 'Assessment Backlog',
-      description: 'Every new feature, vendor, or data use requires a formal privacy review. Product launches delayed 2–4 weeks.',
+      description: 'Every new product, vendor, or data use requires a privacy review. Product launches get delayed 2-4 weeks waiting on your team.',
       position: 'left',
     },
     {
       icon: <Mail className="w-5 h-5" />,
       title: 'Stakeholder Chasing',
-      description: 'Privacy sends questionnaires; business units ignore them. 10+ email reminders per assessment.',
+      description: 'You send questionnaires. Business units ignore them. 10+ email reminders per assessment. Your team spends more time chasing than analyzing.',
       position: 'left',
     },
     {
       icon: <AlertTriangle className="w-5 h-5" />,
       title: 'Audit Anxiety',
-      description: 'Regulators can request proof of your privacy reviews at any time. PDPL fines up to 5M SAR.',
+      description: 'Regulators can request proof of your privacy reviews at any time. PDPL fines reach 5M SAR. Can you produce a complete audit trail right now?',
       position: 'left',
     },
   ];
@@ -148,19 +148,19 @@ export function ChallengesSection() {
     {
       icon: <UserCircle className="w-5 h-5" />,
       title: 'For DPOs',
-      description: 'Portfolio visibility across all assessments and audit-ready documentation that regulators expect.',
+      description: 'Portfolio visibility across all assessments. Audit-ready documentation that regulators expect. Every decision logged with reasoning.',
       position: 'right',
     },
     {
       icon: <Users className="w-5 h-5" />,
       title: 'For Privacy Analysts',
-      description: 'Stop spending 60% of your time chasing stakeholders. Get complete responses in one session.',
+      description: 'Stop spending 60% of your time on logistics. Get complete stakeholder responses in one 30-minute session. Focus on actual risk work.',
       position: 'right',
     },
     {
       icon: <Scale className="w-5 h-5" />,
       title: 'For Legal & Compliance',
-      description: 'Prove systematic compliance to regulators with full audit trails and sign-off workflows.',
+      description: 'Prove systematic compliance with full audit trails. Sign-off workflows that document who approved what and why.',
       position: 'right',
     },
   ];
@@ -190,7 +190,7 @@ export function ChallengesSection() {
             Privacy teams are overwhelmed
           </h2>
           <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto text-center">
-            Manual processes break at scale. Here's why privacy teams struggle — and how Kaitaki solves each challenge.
+            Manual processes break at scale. Here's why - and how Kaitaki solves each problem.
           </p>
         </motion.div>
 

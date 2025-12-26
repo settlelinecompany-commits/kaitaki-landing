@@ -99,14 +99,14 @@ const caseStudies = [
     preview: VoiceAgentPreview,
     metrics: [
       { value: 80, suffix: '%', label: 'Faster Completion', sub: 'Assessment turnaround time' },
-      { value: 30, suffix: 'min', label: 'Average Interview', sub: 'Down from 3+ weeks of emails' },
+      { value: 30, suffix: 'min', label: 'Average Interview', sub: 'Down from 3+ weeks of emails. Stakeholders complete in one session.' },
     ],
     features: ['Voice-based capture', 'Smart follow-ups', 'Auto-reminders'],
   },
   {
     id: 2,
     title: 'Audit Confidence',
-    description: 'Every decision documented with full reasoning, citations, and version history. Regulators get complete audit trails instantly.',
+    description: 'Every decision documented with full reasoning. Zero follow-ups needed.',
     icon: Shield,
     preview: AuditTrailPreview,
     metrics: [
@@ -150,7 +150,7 @@ export function ResultsSection() {
             Real results from privacy teams
           </h2>
           <p className="text-lg md:text-xl text-zinc-600">
-            From assessment backlogs to audit confidence — Kaitaki transforms privacy operations.
+            From assessment backlogs to audit confidence.
           </p>
         </motion.div>
 

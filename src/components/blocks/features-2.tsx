@@ -1,29 +1,49 @@
 'use client';
 
-import { MessageSquare, BarChart3, FileText } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { AssessmentFlowOrbital } from '@/components/ui/assessment-flow-orbital';
+import { ArrowRight } from 'lucide-react';
+import {
+  VoiceInterviewPreview,
+  RiskReasoningPreview,
+  AuditDocPreview,
+} from '@/components/ui/capability-previews';
 
-interface FeatureTag {
-  label: string;
+interface Capability {
+  id: string;
+  title: string;
+  description: string;
+  preview: React.ComponentType;
+  tags: string[];
 }
+
+const capabilities: Capability[] = [
+  {
+    id: 'interview',
+    title: 'Complete responses in 30 minutes',
+    description: 'Stakeholders talk instead of filling forms. Kiwa, your AI interview agent, asks smart follow-ups and captures everything. No more reminder emails. No more incomplete answers.',
+    preview: VoiceInterviewPreview,
+    tags: ['Voice or form-based', 'Smart follow-ups', 'Auto-reminders'],
+  },
+  {
+    id: 'risk',
+    title: 'See exactly why risks are flagged',
+    description: "Every risk shows which answers triggered it, which regulations apply, and the full AI reasoning. Override any decision - your judgment gets logged alongside the AI's. Not a black box.",
+    preview: RiskReasoningPreview,
+    tags: ['Explainable AI', 'Human override', 'Citation links'],
+  },
+  {
+    id: 'audit',
+    title: 'Audit-ready documentation, always',
+    description: 'Every assessment, every decision, every approval - logged automatically. Your ROPA updates in real-time. When regulators ask, you export a complete audit package in one click.',
+    preview: AuditDocPreview,
+    tags: ['Change tracking', 'Legal sign-off', 'Export anytime'],
+  },
+];
 
 export function Features2() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const interviewTags: FeatureTag[] = [
-    { label: 'Voice or form-based' },
-    { label: 'Smart follow-ups' },
-    { label: 'Auto-reminders' },
-  ];
-
-  const auditTags: FeatureTag[] = [
-    { label: 'Change tracking' },
-    { label: 'Legal sign-off' },
-    { label: 'Export anytime' },
-  ];
 
   return (
     <section className="py-20 md:py-28 bg-white" ref={ref}>
@@ -33,95 +53,61 @@ export function Features2() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-12"
+          className="lg:max-w-lg mb-12"
         >
           <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-zinc-500 uppercase bg-zinc-100 rounded-full mb-6">
             Capabilities
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-4">
-            Automation tailored to privacy compliance
+            How Kaitaki Works
           </h2>
-          <p className="text-lg md:text-xl text-zinc-600 max-w-3xl mx-auto">
-            Enterprise-grade workflows with complete oversight and control.
+          <p className="text-lg md:text-xl text-zinc-600">
+            Enterprise-grade automation with complete oversight and control.
           </p>
         </motion.div>
 
-        {/* Case Study Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="border border-zinc-200 rounded-2xl overflow-hidden"
-        >
-          {/* Featured Capability - Stakeholder Interviews */}
-          <div className="group grid gap-6 overflow-hidden px-6 py-8 transition-colors duration-300 hover:bg-zinc-50 lg:grid-cols-2 lg:gap-12 xl:px-12 lg:py-12">
-            {/* Left: Content */}
-            <div className="flex flex-col justify-center">
-              <div className="w-14 h-14 rounded-2xl border border-zinc-200 flex items-center justify-center mb-6">
-                <MessageSquare className="w-6 h-6 text-zinc-700" />
-              </div>
-              
-              <h3 className="text-2xl md:text-3xl font-bold text-zinc-900 mb-4">
-                Stakeholder Interviews
-              </h3>
-              <p className="text-lg text-zinc-600 mb-6">
-                Guided questionnaires collect complete responses in 30 minutes, not 3 weeks of emails.
-              </p>
-              
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {interviewTags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-4 py-2 text-sm text-zinc-600 bg-zinc-100 rounded-full"
-                  >
-                    {tag.label}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            {/* Right: Animation */}
-            <div className="flex items-center justify-center">
-              <AssessmentFlowOrbital />
-            </div>
-          </div>
+        {/* Capabilities Grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {capabilities.map((capability, index) => {
+            const PreviewComponent = capability.preview;
+            return (
+              <motion.div
+                key={capability.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200 hover:border-zinc-300 hover:shadow-lg transition-all bg-white"
+              >
+                {/* UI Preview */}
+                <div className="relative px-4 pt-4 pb-2 md:px-5 md:pt-5 md:pb-3 bg-zinc-50">
+                  <PreviewComponent />
+                </div>
 
-          {/* Secondary Capabilities */}
-          <div className="grid lg:grid-cols-2 border-t border-zinc-200">
-            {/* Risk Scoring */}
-            <div className="group flex flex-col justify-center gap-4 bg-white px-6 py-8 transition-colors duration-300 hover:bg-zinc-50 lg:py-10 lg:px-8 border-b lg:border-b-0 lg:border-r border-zinc-200">
-              <h3 className="text-xl md:text-2xl font-bold text-zinc-900">
-                Risk Scoring
-              </h3>
-              <p className="text-base text-zinc-600">
-                Risks automatically scored against your matrix with regulation mapping to PDPL, GDPR, CPRA.
-              </p>
-            </div>
+                {/* Content */}
+                <div className="px-4 py-4 md:px-5 md:py-5 flex flex-col flex-1">
+                  <h3 className="mb-2 text-lg md:text-xl font-bold text-zinc-900">
+                    {capability.title}
+                  </h3>
+                  <p className="text-sm text-zinc-600 leading-relaxed mb-4 flex-1">
+                    {capability.description}
+                  </p>
 
-            {/* Workflow & Audit Trail */}
-            <div className="group flex flex-col justify-center gap-4 bg-white px-6 py-8 transition-colors duration-300 hover:bg-zinc-50 lg:py-10 lg:px-8">
-              <h3 className="text-xl md:text-2xl font-bold text-zinc-900">
-                Workflow & Audit Trail
-              </h3>
-              <p className="text-base text-zinc-600 mb-4">
-                Every approval, edit, and decision logged for regulators. Full traceability from intake to sign-off.
-              </p>
-              
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {auditTags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-4 py-2 text-sm text-zinc-600 bg-zinc-100 rounded-full"
-                  >
-                    {tag.label}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {capability.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2.5 py-1 text-xs text-zinc-500 bg-zinc-100 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
