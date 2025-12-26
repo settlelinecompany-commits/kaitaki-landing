@@ -103,18 +103,18 @@ export function UseCasesSection({ onBookDemo }: UseCasesSectionProps) {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200 hover:border-zinc-300 hover:shadow-lg transition-all bg-white"
               >
                 {/* UI Preview with Stat Badge */}
-                <div className="relative px-6 pt-6 pb-4 md:px-8 md:pt-8 md:pb-6 bg-zinc-50">
+                <div className="relative p-4 bg-zinc-50">
                   <PreviewComponent />
                   {/* Stat Badge Overlay */}
-                  <div className="absolute top-8 right-8 md:top-10 md:right-10 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-1.5 shadow-lg border border-zinc-100">
-                    <p className="text-lg md:text-xl font-bold text-zinc-900">{useCase.stat}</p>
+                  <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-1.5 shadow-lg border border-zinc-100">
+                    <p className="text-lg font-bold text-zinc-900">{useCase.stat}</p>
                     <p className="text-[10px] text-zinc-500">{useCase.statLabel}</p>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="px-6 py-5 md:px-8 md:py-6">
-                  <h3 className="mb-2 text-lg md:text-xl font-bold text-zinc-900">
+                <div className="p-4">
+                  <h3 className="mb-2 text-lg font-bold text-zinc-900">
                     {useCase.title}
                   </h3>
                   <p className="text-sm text-zinc-600 leading-relaxed">

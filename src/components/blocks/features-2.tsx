@@ -79,16 +79,16 @@ export function Features2() {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200 hover:border-zinc-300 hover:shadow-lg transition-all bg-white"
               >
                 {/* UI Preview */}
-                <div className="relative px-4 pt-4 pb-2 md:px-5 md:pt-5 md:pb-3 bg-zinc-50">
+                <div className="relative p-4 bg-zinc-50">
                   <PreviewComponent />
                 </div>
 
                 {/* Content */}
-                <div className="px-4 py-4 md:px-5 md:py-5 flex flex-col flex-1">
-                  <h3 className="mb-2 text-lg md:text-xl font-bold text-zinc-900">
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="mb-2 text-lg font-bold text-zinc-900">
                     {capability.title}
                   </h3>
-                  <p className="text-sm text-zinc-600 leading-relaxed mb-4 flex-1">
+                  <p className="text-sm text-zinc-600 leading-relaxed mb-3 flex-1">
                     {capability.description}
                   </p>
 
@@ -97,7 +97,7 @@ export function Features2() {
                     {capability.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-2.5 py-1 text-xs text-zinc-500 bg-zinc-100 rounded-full"
+                        className="px-2 py-0.5 text-xs text-zinc-500 bg-zinc-100 rounded-full"
                       >
                         {tag}
                       </span>
